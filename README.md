@@ -1,2 +1,2 @@
-# Coordinate-Aware-Mask-R-CNN-with-Group-Normalization-Towards-Improved-Underwater-Instance-Segmentat
+# Coordinate-Aware-Mask-R-CNN-with-Group-Normalization-Towards-Improved-Underwater-Instance-Segmentation
 A hybrid Coordinate-Aware Mask R-CNN model with Group Normalization.
