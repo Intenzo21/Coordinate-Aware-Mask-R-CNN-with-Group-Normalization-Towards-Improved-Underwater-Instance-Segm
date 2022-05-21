@@ -1,0 +1,18 @@
+name: aqua
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - cudatoolkit=11.3.1=h59b6b97_2
+  - pandas=1.4.1=py39h2e25243_0
+  - pefile=2021.9.3=pyhd8ed1ab_0
+  - python=3.9.10=h9a09f29_2_cpython
+  - pytorch=1.11.0=py3.9_cuda11.3_cudnn8_0
+  - opencv=4.5.5=py39hcbf5309_3
+  - torchaudio=0.11.0=py39_cu113
+  - torchvision=0.12.0=py39_cu113
+  - scikit-learn=1.0.2=py39he931e04_0
+  - pip
+  - pip:
+    - -r requirements.txt
