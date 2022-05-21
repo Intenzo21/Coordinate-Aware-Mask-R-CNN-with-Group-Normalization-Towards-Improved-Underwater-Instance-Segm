@@ -12,6 +12,7 @@ dependencies:
   - opencv=4.5.5=py39hcbf5309_3
   - torchaudio=0.11.0=py39_cu113
   - torchvision=0.12.0=py39_cu113
+  - scikit-image=0.19.2=py39h2e25243_0
   - scikit-learn=1.0.2=py39he931e04_0
   - pip
   - pip:

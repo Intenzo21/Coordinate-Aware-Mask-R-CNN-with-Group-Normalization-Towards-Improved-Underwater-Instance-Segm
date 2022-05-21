@@ -97,7 +97,7 @@ class InstanceSegmentor:
             from centermask import config as cm_config
             self.cfg = cm_config.get_cfg()
         else:
-            from AdelaiDet.adet import config as adet_config
+            from adet import config as adet_config
             self.cfg = adet_config.get_cfg()
             if self.model == "solov2":
 
