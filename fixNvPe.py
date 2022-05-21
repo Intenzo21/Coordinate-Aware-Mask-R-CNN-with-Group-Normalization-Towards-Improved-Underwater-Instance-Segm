@@ -1,5 +1,5 @@
 """
-Simple script to disable Address Space Layout Randomization ASLR and make .nv_fatb sections read-only
+Simple script to disable Address Space Layout Randomization (ASLR) and make .nv_fatb sections read-only
 
 ASLR is 'address space layout randomization.' It is a security feature that randomizes where a DLL is loaded in
 memory. We disable it for this DLL so that all Python processes will load the DLL into the same base virtual address.

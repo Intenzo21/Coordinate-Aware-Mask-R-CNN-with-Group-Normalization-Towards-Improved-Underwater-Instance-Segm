@@ -23,6 +23,7 @@ from detectron2.utils.logger import setup_logger
 from detectron2.utils.visualizer import Visualizer, ColorMode
 
 from utils import register_datasets, CustomFormatter
+from matplotlib import colors
 
 
 def create_instances(predictions, image_size):
@@ -87,14 +88,13 @@ if __name__ == "__main__":
     # containing info about each image
     dicts = list(DatasetCatalog.get(args.dataset))
 
-    # Uncomment to get reproducible colors for instances
-    # from matplotlib import colors
-    # clrs = ['b', 'g', 'r', 'c', 'm', 'y', 'w']
-    # random.seed(42)
-    # random.shuffle(clrs)
+    # Get reproducible colors for instances
+    clrs = ['b', 'g', 'r', 'c', 'm', 'y', 'w']
+    random.seed(42)
+    random.shuffle(clrs)
     metadata = MetadataCatalog.get(args.dataset)
-    # clrs = clrs[:len(metadata.thing_classes)]
-    # metadata.set(thing_colors=[colors.to_rgb(c=clr) for clr in clrs])
+    clrs = clrs[:len(metadata.thing_classes)]
+    metadata.set(thing_colors=[colors.to_rgb(c=clr) for clr in clrs])
 
     # Create the ground-truth images folder
     gt_dir = os.path.join(args.output, "gt")
@@ -111,11 +111,11 @@ if __name__ == "__main__":
         basename = os.path.basename(dic["file_name"])
 
         preds = create_instances(pred_by_image[dic["image_id"]], img.shape[:2])
-        vis = Visualizer(img, metadata, instance_mode=ColorMode.SEGMENTATION)
+        vis = Visualizer(img, metadata, instance_mode=ColorMode.SEGMENTATION, fontsize=36)
         vis_pred = vis.draw_instance_predictions(preds).get_image()
         cv2.imwrite(os.path.join(pred_dir, basename), vis_pred[:, :, ::-1])
 
-        vis = Visualizer(img, metadata, instance_mode=ColorMode.SEGMENTATION)
+        vis = Visualizer(img, metadata, instance_mode=ColorMode.SEGMENTATION, fontsize=36)
         vis_gt = vis.draw_dataset_dict(dic).get_image()
         cv2.imwrite(os.path.join(gt_dir, basename), vis_gt[:, :, ::-1])
 

@@ -1,4 +1,10 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
+"""
+Script that implements the VisualizationDemo class used in visualising and
+creating inference demo videos.
+
+Adapted from: https://github.com/facebookresearch/detectron2
+"""
 import atexit
 import bisect
 import multiprocessing as mp
@@ -14,6 +20,7 @@ from detectron2.utils.video_visualizer import VideoVisualizer
 from detectron2.utils.visualizer import ColorMode, Visualizer
 
 from matplotlib import colors
+
 
 class VisualizationDemo(object):
     def __init__(self, cfg, instance_mode=ColorMode.SEGMENTATION, parallel=False):
