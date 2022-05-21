@@ -19,4 +19,10 @@ A hybrid Coordinate-Aware Mask R-CNN model with Group Normalization.
   where <env_name> should be replaced with the new custom name of the environment.
 
 6. Run a script file (dataset and pretrained COCO weights are needed).
-
+* demo.py - Script for creating demo inference videos.
+* inspect_results.py - Script used for inspecting loss results along with validation and
+test set output metrics of a model.
+* plot_dist.py - Script plotting the data distribution across the training, validation and test sets.
+* run_amsrcr.py - Script that runs the AMSRCR image enhancement technique on a given image dataset.
+* train_eval_model.py - Script used for training an instance segmentation model.
+* visualize_json_results.py - Script used for visualising model JSON IS results (i.e. coco_instances_results.json).
