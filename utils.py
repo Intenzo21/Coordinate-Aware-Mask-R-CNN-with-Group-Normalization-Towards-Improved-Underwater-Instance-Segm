@@ -652,7 +652,9 @@ def inst_segm_argument_parser(epilog=None):
         :param val: the value to check
         :return: the value if it passes the check
         """
-        if val <= 0 and not isinstance(val, int):
+
+        val = int(val)
+        if val <= 0:
             raise argparse.ArgumentTypeError(f"Expected a positive integer got: {val}")
         return val
 
