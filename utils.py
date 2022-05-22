@@ -756,7 +756,7 @@ def inst_segm_argument_parser(epilog=None):
     # Add an argument to define parameters used in model evaluation.
     parser.add_argument(
         "--eval-args",
-        default=[True, False, "test_inference"],
+        default=["True", "False", "test_inference"],
         nargs=3,
         metavar=("TEST_SET", "TTA", "INF_FOLDER_NAME"),
         help="booleans to enable/disable test set and TTA usages, and a name"
