@@ -1,4 +1,4 @@
-name: aqua
+name: aquatic
 channels:
   - pytorch
   - conda-forge
