@@ -52,4 +52,4 @@ if __name__ == "__main__":
 
         target_path = os.path.join(target_dir, os.path.basename(img_p))
 
-        cv2.imwrite(target_path, img)
+        cv2.imwrite(target_path, img_amsrcr)
