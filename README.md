@@ -2,6 +2,16 @@
 
 We propose a novel hybrid Instance Segmentation (IS) method, called Coordinate-Aware Mask R-CNN (CAM-RCNN), which is motivated by the Mask R-CNN (MRCNN) and Segmenting Objects by LOcation v2 (SOLOv2) algorithms. CAM-RCNN’s structure is mainly constructed on MRCNN with modifications replicated from SOLOv2’s architecture. To this end, we extend MRCNN by introducing a CoordConv layer, multiple Group Normalization (GN) data normalisation layers, and the unique compound DiceBCE Loss (DBL) function to its mask prediction branch. We also present a box-based version of SOLOv2’s mask-based Matrix Non-Maximum Suppression (MNMS), termed Matrix Bounding Box Non-Maximum Suppression (MBBNMS), which replaces the original Batched NMS (BNMS) of MRCNN applied to its predicted region proposals. For training and evaluation, we adopt several real-world unique aquatic datasets provided by the University of Aberdeen. Along with the aforementioned models, we consider two other State-Of-The-Art (SOTA) techniques, namely CenterMask and Conditional Convolutions for Instance Segmentation (CondInst), to better validate our findings. Our results indicate that CAM-RCNN achieves an outstanding test set generalisation performance compared to the other SOTA architectures on almost all evaluation metrics considered. Particularly, the finalised CAM-RCNN model demonstrates over 2.5× (177.3%) and 31.9% increase in instance mask Average Precision (AP) regarding the worst and best performing baseline models, respectively. Our proposed CAM-RCNN is promising to be a generic approach for IS-related applications.
 
+| **Model** |  **AP** | **AP**$\mathbf{_{50}}$  | **AP**$\mathbf{_{75}}$ | **AP**$\mathbf{^{bb}}$ | **AP**$\mathbf{_{50}^{bb}}$ | **AP**$\mathbf{_{75}^{bb}}$ |
+| :---- | :----: | :----: | :----: | :----: | :----: | :----: |
+| CenterMask | 14.9 | 19.8 | 18.2 | 15.9 | 19.6 | 18.8 |
+| CondInst   | 8.8  | 11.2 | 10.9 | 8.9 | 11.1 | 10.8 |
+| MRCNN      | 18.5 | 24.9 | 22.6 | 18.8 | 24.4 | 22.8 |
+| SOLOv2     | 14.5 | 19.8 | 16.7 |  -   |  -   |  -   |
+| CAM-RCNN   | **24.4** | **31.5** | **30.2** | **24.2** | **31.3** | **27.5** |
+
+**Table 1.** Quantitative results of instance mask and Bounding Box (BB) of different methods in the target domain. $\mathbf{bb}$ denotes BBOX.
+
 ## Installation
 
 1. Install the latest [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) (Anaconda);
