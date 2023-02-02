@@ -4,11 +4,11 @@ We propose a novel hybrid Instance Segmentation (IS) method, called Coordinate-A
 
 | **Model** |  **AP** | **AP**$\mathbf{_{50}}$  | **AP**$\mathbf{_{75}}$ | **AP**$\mathbf{^{bb}}$ | **AP**$\mathbf{_{50}^{bb}}$ | **AP**$\mathbf{_{75}^{bb}}$ |
 | :---- | :----: | :----: | :----: | :----: | :----: | :----: |
-| CenterMask | 14.9 | 19.8 | 18.2 | 15.9 | 19.6 | 18.8 |
-| CondInst   | 8.8  | 11.2 | 10.9 | 8.9 | 11.1 | 10.8 |
-| MRCNN      | 18.5 | 24.9 | 22.6 | 18.8 | 24.4 | 22.8 |
-| SOLOv2     | 14.5 | 19.8 | 16.7 |  -   |  -   |  -   |
-| CAM-RCNN   | **24.4** | **31.5** | **30.2** | **24.2** | **31.3** | **27.5** |
+| [CenterMask](https://dl.dropbox.com/s/lw8nxajv1tim8gr/centermask2-V-57-eSE-FPN-ms-3x.pth) | 14.9 | 19.8 | 18.2 | 15.9 | 19.6 | 18.8 |
+| [CondInst](https://cloudstor.aarnet.edu.au/plus/s/vWLiYm8OnrTSUD2/download) | 8.8  | 11.2 | 10.9 | 8.9 | 11.1 | 10.8 |
+| [MRCNN](https://dl.fbaipublicfiles.com/detectron2/COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x/138205316/model_final_a3ec72.pkl) | 18.5 | 24.9 | 22.6 | 18.8 | 24.4 | 22.8 |
+| [SOLOv2](https://cloudstor.aarnet.edu.au/plus/s/9w7b3sjaXvqYQEQ) | 14.5 | 19.8 | 16.7 |  -   |  -   |  -   |
+| [CAM-RCNN](https://github.com/Intenzo21/Coordinate-Aware-Mask-R-CNN-with-Group-Normalization-Towards-Improved-Underwater-Instance-Segm/raw/main/pretrained/cam-rcnn/model_final.pth) | **24.4** | **31.5** | **30.2** | **24.2** | **31.3** | **27.5** |
 
 **Table 1.** Quantitative results of instance mask and Bounding Box (BB) of different methods in the target domain. $\mathbf{bb}$ denotes BBOX.
 
